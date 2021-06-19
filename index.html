@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    body {
-      background-color: burlywood;
-    }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  <header>
+  <div class="hero-background">
 
-    <div class="logo-container">
-      <img src="./images/logo.svg" alt="logo">
-    </div>
+    <header>
+      <div class="logo-container">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
 
-    <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+      <div class="menu">
+        <div id="hamburger"></div>
 
-  </header>
+        <nav class="navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <section class="hero-section">
+      <h1 class="text-center">We are creatives</h1>
+
+      <div class="arrow-down-container">
+        <img src="./images/icon-arrow-down.svg" alt="Arrow down">
+      </div>
+    </section>
+
+  </div>
+
   
-  <section class="hero-section">
-    <h1>We are creatives</h1>
-    <div class="arrow-down-container">
-      <img src="./images/icon-arrow-down.svg" alt="Arrow down">
-    </div>
-  </section>
-  
-  <section>
+  <section id="about" class="about-section"> 
     <div class="text-transform-container">
       <h2>Transform your brand</h2>
       <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
@@ -71,7 +75,7 @@
     </div>
   </section>
 
-  <section class="testimonials-section">
+  <section id="testimonials" class="testimonials-section">
     <h2>Client testimonials</h2>
 
     <div class="first-testimonial">
@@ -103,13 +107,12 @@
     
   </section>
 
-  <section class="image-gallery">
+  <section id="gallery" class="image-gallery">
     <div class="single-image-container image-gallery-milkbottles"></div>
     <div class="single-image-container image-gallery-orange"></div>
     <div class="single-image-container image-gallery-cone"></div>
     <div class="single-image-container image-gallery-sugarcubes"></div>
   </section>
-
   
   <footer>
     <div class="footer-logo-container">
@@ -117,18 +120,23 @@
     </div>
 
     <ul>
-      <li><a href="#">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Projects</a></li>
     </ul>
 
+    <div class="social-media-list">
+      <a href="#"><img src="./images/icon-facebook.svg" alt="facebook icon"></a>
+      <a href="#"><img src="./images/icon-instagram.svg" alt="instagram icon"></a>
+      <a href="#"><img src="./images/icon-twitter.svg" alt="twitter icon"></a>
+      <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest icon"></a>
+    </div>
+
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="#">Giuliana Aliotti</a>.</p>
     </div>
   </footer>
-
-  
 
 </body>
 </html>

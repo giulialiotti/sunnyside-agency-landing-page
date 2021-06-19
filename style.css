@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* FONT */
+
+    --barlow: 'Barlow', sans-serif;
+    --fraunces: 'Fraunces', serif;
+
+    /* PRIMARY COLOURS */
+
+    --softRed: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --darkDesaturatedCyan: hsl(167, 40%, 24%);
+    --darkBlue: hsl(198, 62%, 26%);
+    --darkModerateCyan: hsl(168, 34%, 41%);
+
+    /* NEUTRAL */
+
+    --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
+    --veryDarkGrayishBlue: hsl(213, 9%, 39%);
+    --darkGrayishBlue: hsl(232, 10%, 55%);
+    --grayishBlue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------
+-------------------------- HERO SECTION --------------------------
+---------------------------------------------------------------- */
+
+.hero-background {
+    background-image: url('./images/mobile/image-header.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    height: 90vh;
+    padding: 8%;
+}
+
+.hero-background header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    width: 35%;
+}
+
+.logo-container img {
+    max-width: 100%;
+}
+
+#hamburger {
+    background-image: url('./images/icon-hamburger.svg');
+    width: 24px;
+    height: 18px;
+}
+
+.navigation {
+    display: none;
+}
+
+.hero-section h1 {
+    font-family: var(--fraunces);
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 4rem 0 2rem;
+}
+
+.hero-section .arrow-down-container {
+    display: flex;
+    justify-content: center;
+    height: 6rem;
+}
+
+.hero-section .arrow-down-container img {
+    max-width: 100%;
+}
+
+@media (max-width: 374px) {
+    .hero-section h1 {
+        font-size: 38px;
+        letter-spacing: 4px;    
+    }
+}
+
+/* ----------------------------------------------------------------
+-------------------------- SECTION --------------------------
+---------------------------------------------------------------- */
