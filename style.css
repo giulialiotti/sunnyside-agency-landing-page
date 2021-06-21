@@ -68,18 +68,64 @@ a {
     max-width: 100%;
 }
 
-#hamburger {
+.hamburger {
     background-image: url('./images/icon-hamburger.svg');
     width: 24px;
     height: 18px;
+}
+
+.hamburger.close {
+    background-image: url('./images/times-solid.svg');
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
 }
 
 .navigation {
     display: none;
 }
 
+.active {
+    display: block;
+    position: absolute;
+    left: 8%;
+    top: 13%;
+    width: 84%;
+    height: 55%;
+    z-index: 999;
+    background-color: white;
+    clip-path: polygon(93% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    transition: 2s;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+}
+
 .navigation ul li {
     list-style: none;
+}
+
+.navigation ul li a {
+    font-family: var(--barlow);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--darkGrayishBlue);
+}
+
+.navigation ul .contact-button {
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--veryDarkDesaturatedBlue);
+    text-transform: uppercase;
+    background-color: var(--yellow);
+    padding: 15px 25px;
+    border-radius: 999px;
 }
 
 .hero-section h1 {
@@ -158,6 +204,17 @@ a {
     text-transform: uppercase;
 }
 
+.grid-section .text-transform-container a .underline-transform {
+    width: 110%;
+    height: 10px;
+    position: relative;
+    top: -8px;
+    left: -6.5px;
+    z-index: -1;
+    border-radius: 999px;
+    background-color: hsl(51deg 100% 49% / 47%);
+}
+
 .grid-section .image-stand-out-container {
     background-image: url('./images/mobile/image-stand-out.jpg');
     background-size: cover;
@@ -180,6 +237,17 @@ a {
     font-weight: 900;
     color: var(--veryDarkDesaturatedBlue);
     text-transform: uppercase;
+}
+
+.grid-section .text-stand-out-container a .underline-stand-out {
+    width: 110%;
+    height: 10px;
+    position: relative;
+    top: -8px;
+    left: -6.5px;
+    z-index: -1;
+    border-radius: 999px;
+    background-color: hsl(7deg 99% 70% / 47%);
 }
 
 .grid-section .graphic-design-container {
@@ -380,6 +448,11 @@ footer .attribution p a {
     color: var(--darkDesaturatedCyan);
 }
 
+footer .attribution p a:hover {
+    transition: .3s;
+    color: var(--white);
+}
+
 /* ---------------------------------------------------------------
 --------------------------- END MOBILE ---------------------------
 ---------------------------------------------------------------- */
@@ -403,6 +476,7 @@ footer .attribution p a {
 
     .hero-section .arrow-down-container {
         height: 5.2rem;
+        margin-top: 2%;
     }
 
     .menu {
@@ -417,9 +491,12 @@ footer .attribution p a {
         display: block;
     }
 
+    .active {
+        display: none;
+    }
+
     .navigation ul {
-        display: flex;
-        align-items: center;
+        flex-direction: row;
         justify-content: space-around;
     }
 
@@ -439,6 +516,12 @@ footer .attribution p a {
         background-color: var(--white);
         padding: 10px 20px;
         border-radius: 999px;
+        transition: .2s;
+    }
+
+    .navigation ul .contact-button:hover {
+        color: var(--white);
+        background-color: rgba(255, 255, 255, 0.384);
     }
 
     /* ----------------------------------------------------------------
@@ -461,6 +544,16 @@ footer .attribution p a {
         padding: 18% 12% 18% 24%;
     }
 
+    .grid-section .text-transform-container a .underline-transform {
+        display: none;
+        background-color: var(--yellow);
+    }
+
+    .grid-section .text-transform-container a:hover .underline-transform {
+        display: block;
+        transition: 3s;
+    }
+
     .grid-section .image-stand-out-container {
         background-image: url('./images/desktop/image-stand-out.jpg');
         grid-area: 2 / 1 / 3 / 2;
@@ -470,6 +563,16 @@ footer .attribution p a {
         align-items: flex-start;
         grid-area: 2 / 2 / 3 / 3;
         padding: 18% 25% 18% 12%;
+    }
+
+    .grid-section .text-stand-out-container a .underline-stand-out {
+        display: none;
+        background-color: var(--softRed);
+    }
+
+    .grid-section .text-stand-out-container a:hover .underline-stand-out {
+        display: block;
+        transition: 3s;
     }
 
     .grid-section .graphic-design-container {
@@ -570,7 +673,21 @@ footer .attribution p a {
         padding: 20% 22%;
     }
 
+    footer .social-media-list a svg path:hover {
+        fill: var(--white);
+        transition: .2s;
+    }
+
+    footer .footer-menu li a:hover {
+        color: var(--white);
+        transition: .2s;
+    }
+
     footer .attribution p {
         padding-bottom: 2%;
     }
 }
+
+/* ---------------------------------------------------------------
+--------------------------- END DESKTOP --------------------------
+---------------------------------------------------------------- */
