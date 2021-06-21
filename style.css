@@ -39,7 +39,11 @@ a {
     text-align: center;
 }
 
-/* ----------------------------------------------------------------
+/* ---------------------------------------------------------------
+----------------------------- MOBILE -----------------------------
+---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------
 -------------------------- HERO SECTION --------------------------
 ---------------------------------------------------------------- */
 
@@ -72,6 +76,10 @@ a {
 
 .navigation {
     display: none;
+}
+
+.navigation ul li {
+    list-style: none;
 }
 
 .hero-section h1 {
@@ -362,7 +370,6 @@ footer .social-media-list {
 }
 
 footer .attribution p {
-    text-decoration: none;
     font-family: var(--barlow);
     color: var(--darkModerateCyan);
     font-weight: 500;
@@ -371,4 +378,121 @@ footer .attribution p {
 
 footer .attribution p a {
     color: var(--darkDesaturatedCyan);
+}
+
+/* ---------------------------------------------------------------
+--------------------------- END MOBILE ---------------------------
+---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------
+------------------------- DESKTOP VERSION ------------------------
+---------------------------------------------------------------- */
+
+@media screen and (min-width: 960px) {
+
+    /* ---------------------------------------------------------------
+    -------------------------- HERO SECTION --------------------------
+    ---------------------------------------------------------------- */
+
+    .hero-background {
+        background-image: url('./images/desktop/image-header.jpg');
+        padding: 4%;
+        height: 100vh;
+ 
+    }
+
+    .hero-section .arrow-down-container {
+        height: 5.2rem;
+    }
+
+    .menu {
+        width: 35%;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navigation ul li a {
+        font-family: var(--barlow);
+        font-weight: 500;
+        font-size: 15px;
+        color: var(--white);
+    }
+
+    .navigation ul .contact-button {
+        font-family: var(--fraunces);
+        font-weight: 900;
+        font-size: 14px;
+        color: var(--veryDarkDesaturatedBlue);
+        text-transform: uppercase;
+        background-color: var(--white);
+        padding: 10px 20px;
+        border-radius: 999px;
+    }
+
+    /* ----------------------------------------------------------------
+    -------------------------- GRID SECTION --------------------------
+    ---------------------------------------------------------------- */
+
+    .grid-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 500px);
+    }
+
+    .grid-section .image-transform-container {
+        background-image: url('./images/desktop/image-transform.jpg');
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .grid-section .text-transform-container {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 14% 8%; */
+        align-items: flex-start;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .grid-section .image-stand-out-container {
+        background-image: url('./images/desktop/image-stand-out.jpg');
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .grid-section .text-stand-out-container {
+        align-items: flex-start;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .grid-section .graphic-design-container {
+        background-image: url('./images/desktop/image-graphic-design.jpg');
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .grid-section .photography-container {
+        background-image: url('./images/desktop/image-photography.jpg');
+        grid-area: 3 / 2 / 4 / -1;
+    }
+
+    .grid-section .text-transform-container h2,
+    .grid-section .text-stand-out-container h2 {
+        text-align: left;
+    }
+
+    .grid-section .text-transform-container p,
+    .grid-section .text-stand-out-container p {
+        text-align: left;
+    }
+    
 }
