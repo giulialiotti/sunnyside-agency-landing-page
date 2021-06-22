@@ -544,13 +544,8 @@ footer .attribution p a:hover {
         padding: 18% 12% 18% 24%;
     }
 
-    .grid-section .text-transform-container a .underline-transform {
-        display: none;
-        background-color: var(--yellow);
-    }
-
     .grid-section .text-transform-container a:hover .underline-transform {
-        display: block;
+        background-color: var(--yellow);
         transition: 3s;
     }
 
@@ -565,13 +560,8 @@ footer .attribution p a:hover {
         padding: 18% 25% 18% 12%;
     }
 
-    .grid-section .text-stand-out-container a .underline-stand-out {
-        display: none;
-        background-color: var(--softRed);
-    }
-
     .grid-section .text-stand-out-container a:hover .underline-stand-out {
-        display: block;
+        background-color: var(--softRed);
         transition: 3s;
     }
 
